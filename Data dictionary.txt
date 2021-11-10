@@ -1,0 +1,30 @@
+1. T1.csv
+This file contains the reconstructed survival data. 
+
+survtime: reconstructed survival time of individual patients
+censor: censoring status, 0=censored and 1=event
+group: MRD status, 0=MRD positive and 1=MRD negative
+event: types of event, all types other than overall survival (OS) are considered as disease-free survival (DFS)
+pmid: PMID for the individual study
+
+2. T2.csv
+This file contains the log HR estimates and corresponding standard errors.
+
+PMID: PMID for the individual study
+Event: types of event, all types other than overall survival (OS) are considered as disease-free survival (DFS)
+ref: reference group, "N" means it is the ratio of the positive group to the MRD negative group
+HR: HR estimates
+HR.l95, HR.u95: lower and upper limits of 95% confidence intervals.
+LOG.HR: log HR estimates
+LOG.HR.SE: the standard error for the log HR estimates.
+included in T1: indicator that if the study has reconstructed survival data
+
+3. T3.csv
+This file contains the survival rates and corresponding standard errors.
+
+PMID: PMID for the individual study
+MRD_group: indicators for MRD status, 0=MRD positive and 1=MRD negative
+Event: types of event, all types other than overall survival (OS) are considered as disease-free survival (DFS)
+time (in months): time points for the reported survival rates
+survival rate: estimated survival probabilities
+std.err: estimated standard errors
